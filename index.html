@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>FOBAR</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Forward-Backward Reasoning in Large Language Models for Mathematical Verification</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"> <a href="http://wayson.tech/" target="_blank">Weisen Jiang</a><sup>1,2</sup>,</span>
+              <span class="author-block"> <a href="https://han-shi.github.io/" target="_blank"> Han Shi</a><sup>3</sup>,</span>
+              <span class="author-block"> <a href="https://yulonghui.github.io/" target="_blank">Longhui Yu</a><sup>4</sup>, </span>
+              <span class="author-block"> <a href="https://scholar.google.com/citations?user=DFme0joAAAAJ" target="_blank">Zhengying Liu</a><sup>3</sup>,</span>
+              <span class="author-block"> <a href="https://cse.sustech.edu.cn/faculty/~zhangy/" target="_blank">Yu Zhang</a><sup>1,5</sup>,</span>
+              <span class="author-block"> <a href="https://scholar.google.com/citations?user=XboZC1AAAAAJ" target="_blank">Zhenguo Li</a><sup>4</sup>,</span>
+              <span class="author-block"> <a href="https://www.cse.ust.hk/~jamesk/" target="_blank">James T. Kwok</a><sup>2</sup>,</span>
+            </div>
+
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block"><sup>1</sup>Southern University of Science and Technology,
+                       <sup>2</sup>Hong Kong University of Science and Technology
+                      <br><sup>3</sup>Huawei Noah’s Ark Lab, <sup>4</sup>Peking University, <sup>5</sup>Peng Cheng Laboratory</span>
+                    <span class="eql-cntrb"></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2308.07758" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/overview.png" alt="MY ALT TEXT" width="758"/>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Chain-of-Thought (CoT) prompting in large language models (LLMs) has
+            shown promising performance on mathematical reasoning tasks.
+            Recently, Self-Consistency samples a diverse set of reasoning chains with
+            different answers and chooses the answer by majority voting.
+            Though effective,
+            its performance cannot be further improved by sampling more reasoning chains.
+            To address this problem, we propose to integrate backward reasoning into answer
+            verification.
+            We first mask a number in the question by ${\bf x}$.
+            The LLM is then asked to
+            predict the masked number with a candidate answer $\hat{A}_c$ embedded in the template:
+            <i>"If we know the answer to the above question is $\hat{A}_c$, what is the value of unknown
+            variable ${\bf x}$?"</i> The LLM is expected to predict the masked number successfully
+            if the provided candidate answer is correct.
+            To further improve performance, we
+            propose FOBAR (FOrward-BAckward Reasoning) to combine forward and backward reasoning for verifying candidate answers.
+            Experiments are performed on
+            six standard mathematical data sets and three LLMs (text-davinci-003, GPT-3.5-Turbo, GPT-4).
+            Results show that FOBAR achieves state-of-the-art performance.
+            In particular, FOBAR outperforms Self-Consistency which uses forward reasoning
+            alone, demonstrating that combining forward and forward reasoning is better.
+            It
+            also outperforms existing verification methods, verifying the effectiveness of using
+            the simple template in backward reasoning and the proposed combination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+  <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3 has-text-centered">Contributions</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Introduce Backward Reasoning to Mathematical Verification</p>
+                                </div>
+                                <div class="message-body">
+                                    <ol>
+                                      <li>A simple template is proposed to create backward questions: We mask a number in the question, and append the template with a candidate answer </li>
+                                      <li>We design a CoT prompt for the LLM to predict the masked number  </li>
+                                      <li>We estimate the probability of the candidate answer based on the number of correct chains in the backward direction  </li>
+                                    </ol>
+                                </div>
+                            </article>
+
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Propose FOBAR to Combine Forward and Backward Reasoning for Verifying Candidate Answers</p>
+                                </div>
+                                <div class="message-body">
+                                    <ol>
+                                      <li>Combine forward and backward probabilities of candidate answers in a soft manner
+                                      $$\mathbb{P} (\hat{A}_c) \propto (\mathbb{P} (\hat{A}_c; \text{forward}))^{\alpha} (\mathbb{P} (\hat{A}_c; \text{backward}))^{1-\alpha} $$
+                                      </li>
+                                      <li>When $\alpha=1$, it recovers the SOTA Self-Consistency</li>
+                                      <li>When $\alpha=0$, it recovers the Backward Reasoning for Verification</li>
+                                      <li>The combination is flexible, other methods like arithmetic mean can be used</li>
+                                    </ol>
+                                </div>
+                            </article>
+
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Extensive Experiments on Various Mathematical Data Sets</p>
+                                </div>
+                                <div class="message-body">
+                                        <ol>
+                                          <li>FOBAR achieves SOTA performance</li>
+                                          <li>FOBAR outperforms Self-Consistency, demonstrating that combining forward and backward reasoning together is better</li>
+                                          <li>FOBAR achieves higher accuracy than Self-Verification,  confirming that using the simple template in backward reasoning and the proposed combination is more effective</li>
+                                        </ol>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<h3 class="title is-4 has-text-centered">Performance of Self-Consistency Saturates Quickly When Increasing #Paths $M_F$</h3>
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/MFSC.png" alt="MY ALT TEXT" width="666"/>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-4 has-text-centered">Template for Generating Questions in Backward Reasoning</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Question</p>
+                                </div>
+                                <div class="message-body">
+                                    <p>
+                                        Jim spends 2 hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this 3
+                                        times a week. How many hours does he
+                                        spend on TV and reading in 4 weeks?
+
+                                      <span style="color: green">(ground-truth answer: 36)</span>
+                                      <br>
+                                      <span style="color: green">(candidate answers: 36, 12)</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Template</p>
+                                </div>
+                                <div class="message-body">
+                                    <p>
+                                        If we know the answer to the above question is $\hat{A}_c$, what is the value of unknown
+                                        variable ${\bf x}$?
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Questions for Backward Reasoning (candidate answer: 36)</p>
+                                </div>
+                                <div class="message-body">
+                                        Jim spends ${\bf x}$ hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this 3
+                                        times a week. How many hours does he
+                                        spend on TV and reading in 4 weeks?
+                                        <i>If we know the answer to the above question is 36, what is the value of unknown
+                                        variable ${\bf x}$?</i>
+                                        <br>
+                                        <br>
+                                        Jim spends 2 hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this ${\bf x}$
+                                        times a week. How many hours does he
+                                        spend on TV and reading in 4 weeks?
+                                        <i>If we know the answer to the above question is 36, what is the value of unknown
+                                        variable ${\bf x}$?</i>
+                                        <br>
+                                        <br>
+                                        Jim spends 2 hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this 3
+                                        times a week. How many hours does he
+                                        spend on TV and reading in ${\bf x}$ weeks?
+                                        <i>If we know the answer to the above question is 36, what is the value of unknown
+                                        variable ${\bf x}$?</i>
+                                </div>
+                            </article>
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>Questions for Backward Reasoning (candidate answer: 12)</p>
+                                </div>
+                                <div class="message-body">
+                                        Jim spends ${\bf x}$ hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this 3
+                                        times a week. How many hours does he
+                                        spend on TV and reading in 4 weeks?
+                                        <i>If we know the answer to the above question is 12, what is the value of unknown
+                                        variable ${\bf x}$?</i>
+                                        <br>
+                                        <br>
+                                        Jim spends 2 hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this ${\bf x}$
+                                        times a week. How many hours does he
+                                        spend on TV and reading in 4 weeks?
+                                        <i>If we know the answer to the above question is 12, what is the value of unknown
+                                        variable ${\bf x}$?</i>
+                                        <br>
+                                        <br>
+                                        Jim spends 2 hours watching
+                                        TV and then decides to go to bed and
+                                        reads for half as long. He does this 3
+                                        times a week. How many hours does he
+                                        spend on TV and reading in ${\bf x}$ weeks?
+                                        <i>If we know the answer to the above question is 12, what is the value of unknown
+                                        variable ${\bf x}$?</i>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <h2 class="title is-3 has-text-centered">Experiments</h2>
+  <section class="hero teaser">
+      <h3 class="title is-4 has-text-centered">Main Results</h3>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/main_table.png" alt="MY ALT TEXT" width="688"/>
+    </div>
+  </div>
+</section>
+
+  <h3 class="title is-4 has-text-centered">Usefulness of Forward and Backward Reasoning</h3>
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/fb.png" alt="MY ALT TEXT" width="520"/>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Image carousel -->
+  <h3 class="title is-4 has-text-centered">Ablation Study</h3>
+
+<section class="hero is-8-desktop">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+              <h2 class="subtitle"> Variants of $\alpha$. </h2>
+              <!-- Your image here -->
+           <img src="static/images/alpha.png" alt="MY ALT TEXT" width="888"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+          <h2 class="subtitle"> Geometric mean versus arithmetic mean. </h2>
+          <img src="static/images/mean.png" alt="MY ALT TEXT" width="888"/>
+      </div>
+          <div class="item">
+        <!-- Your image here -->
+              <h2 class="subtitle"> Variants of $M_F$. </h2>
+              <img src="static/images/MF.png" alt="MY ALT TEXT" width="888"/>
+      </div>
+          <div class="item">
+        <!-- Your image here -->
+              <h2 class="subtitle"> Variants of $M_B$. </h2>
+              <img src="static/images/MB.png" alt="MY ALT TEXT" width="888"/>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@TechReport{jiang2023backward,
+  title={Backward Reasoning in Large Language Models for Mathematical Verification},
+  author={Jiang, Weisen and Shi, Han and Yu, Longhui and Liu, Zhengying and Zhang, Yu and Li, Zhenguo and Kwok, James T},
+  type={Preprint},
+  number={arXiv:2308.07758},
+  year={2023}
+}
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
